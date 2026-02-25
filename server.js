@@ -10,7 +10,7 @@ app.use(cors()); // Allows Flutter to talk to this server
 app.use(express.json()); // Allows server to read JSON data
 
 // --- DATABASE CONNECTION ---
-const DB_URL = process.env.DB_URL || 'mongodb://127.0.0.1:27017/braingpp_db';
+const DB_URL = process.env.DB_URL;
 
 mongoose.connect(DB_URL)
   .then(() => console.log('✅ Connected to MongoDB Atlas'))
