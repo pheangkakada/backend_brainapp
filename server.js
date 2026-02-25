@@ -12,6 +12,7 @@ app.use(express.json()); // Allows server to read JSON data
 // --- DATABASE CONNECTION ---
 const DB_URL = process.env.DB_URL;
 
+
 mongoose.connect(DB_URL)
   .then(() => console.log('✅ Connected to MongoDB Atlas'))
   .catch((err) => console.error('❌ Database Connection Error:', err));
